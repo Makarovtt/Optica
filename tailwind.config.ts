@@ -18,9 +18,14 @@ const config: Config = {
       "2/1-md-max": { max: "630px" },
       "2md-max": { max: "540px" },
       "3md-max": { max: "494px" },
+      "3/4md-max": { max: "410px" },
       "4md-max": { max: "310px" },
     },
     extend: {
+      colors: {
+        basicBlue: "#1C626B",
+        basicDarkBlue: "#1C8594",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -28,7 +33,7 @@ const config: Config = {
       },
       spacing: {
         maxwbig: "970px",
-        maxw2big: "",
+        maxw2big: "1170px",
         maxw3big: "1920px",
       },
     },

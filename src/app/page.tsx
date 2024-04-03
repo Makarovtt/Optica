@@ -1,16 +1,18 @@
 import { Banner } from "@/components/banner/banner";
+import { Products } from "@/components/content/products/products";
 import { Header } from "@/components/header/header";
 import Image from "next/image";
+
+const activeLink: string = "main";
 
 export default function Home() {
   return (
     <>
       {/* <Head /> */}
-      <Header activeLink="main" />
+      <Header activeLink={activeLink} />
       <Banner />
-      {/* <Vision />
-      <Glasses />
-      <BackgroundWrraper>
+      <Products />
+      {/* <BackgroundWrraper>
         <Services />
         <Offers />
         <Wait /> 

@@ -43,7 +43,11 @@ const arrMenuData = [
   },
 ];
 
-export function Navigation({ activeLink }: any) {
+type ActiveLinkProps = {
+  activeLink: String;
+};
+
+export function Navigation({ activeLink }: ActiveLinkProps) {
   const [mBtnStatus, setMBtnStatus] = useState(false);
   function toggleMBtnMenu() {
     mBtnStatus ? setMBtnStatus(false) : setMBtnStatus(true);
@@ -60,11 +64,11 @@ export function Navigation({ activeLink }: any) {
           mBtnStatus ? "right-0" : "right-[-300px]",
         )}
       >
-        {arrMenuData?.map((item: any) => {
+        {arrMenuData?.map((item) => {
           return (
             <li
               className={cn(
-                activeLink === "main" ? "is-active-nav-link" : null,
+                activeLink === item.active ? "is-active-nav-link" : null,
                 "py-[15px] relative text-center",
               )}
               key={item.id}
