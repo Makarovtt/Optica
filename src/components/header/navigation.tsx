@@ -54,7 +54,7 @@ export function Navigation({ activeLink }: ActiveLinkProps) {
   }
 
   return (
-    <div className="bg-[#0CAFC4] max-w-maxw3big">
+    <div className="bg-[#0CAFC4] max-w-maxw3big xl-max:px-3">
       <ul
         className={cn(
           "list-none max-w-maxwbig flex mx-auto justify-between px-[5px]",
@@ -68,13 +68,17 @@ export function Navigation({ activeLink }: ActiveLinkProps) {
           return (
             <li
               className={cn(
-                activeLink === item.active ? "is-active-nav-link" : null,
-                "py-[15px] relative text-center",
+                activeLink === item.active
+                  ? "before:bg-white"
+                  : "before:hover:bg-[rgba(255,255,255,0.5)]",
+                "py-[15px] relative text-center transition-all before:content-[''] before:absolute",
+                "before:h-0.5 before:w-[70%] ",
+                "before:m-auto before:left-0 before:right-0 before:bottom-2.5",
               )}
               key={item.id}
             >
               <Link
-                href={item.title}
+                href={item.src}
                 className="not-italic font-bold text-lg tracking-wider text-[#FFFFFF]"
               >
                 {item.title}
@@ -84,7 +88,7 @@ export function Navigation({ activeLink }: ActiveLinkProps) {
         })}
       </ul>
       <button
-        className="fixed top-0 right-0 z-20 items-center justify-center p-0 border-none bg-[#0CAFC4] rounded
+        className="fixed top-2 right-2 z-20 items-center justify-center p-0 border-none bg-[#0CAFC4] rounded
                         outline-none lg-max:flex hidden"
         onClick={toggleMBtnMenu}
       >

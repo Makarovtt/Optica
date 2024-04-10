@@ -5,7 +5,7 @@ export function Banner() {
                             2/1-md-max:bg-[url(/images/banner/vision-mobile.jpg)]"
     >
       <div className="max-w-[1170px] mx-auto">
-        <div className="max-w-[450px] pt-[112px] xl-max:pl-[10px]">
+        <div className="max-w-[450px] pt-[112px] xl-max:pl-[10px] 2/1-md-max:mx-auto">
           <h1
             className="m-0 not-italic font-medium text-6xl text-[#3F3F3F] leading-tight
                         3md-max:text-4xl 4md-max:text-3xl"

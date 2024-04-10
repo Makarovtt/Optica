@@ -1,20 +1,31 @@
 import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/theme");
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // single component styles
+    "./node_modules/@nextui-org/theme/dist/components/button.js",
+    // or you can use a glob pattern (multiple component styles)
+    // './node_modules/@nextui-org/theme/dist/components/(button|snippet|code|input).js'
+
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
       maxw: "1900px",
       "2xl": "1400px",
       lg: "1021px",
-      md: "630px",
+      md: "630px", 
+      "3xl-max": { max: "1320px" },
+      "2xl-max": { max: "1250px" },
       "xl-max": { max: "1180px" },
       "lg-max": { max: "1020px" },
       "md-max": { max: "940px" },
+      "0/5-md-max": { max: "850px" },
       "2/1-md-max": { max: "630px" },
       "2md-max": { max: "540px" },
       "3md-max": { max: "494px" },
@@ -38,6 +49,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };
 export default config;

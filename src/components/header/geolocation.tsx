@@ -4,18 +4,17 @@ import Image from "next/image";
 
 export function Geolocation() {
   return (
-    <div className="flex justify-evenly max-w-[770px] grow">
-      <div className="self-center flex lg-max:hidden">
-        <Image src={IconGeo} alt="" className="h-25px" />
+    <div className="flex justify-end max-w-[770px] grow gap-6">
+      <div className="items-center flex lg-max:hidden">
+        <Image src={IconGeo} alt="" className="h-[20px] w-4" />
         <span className="not-italic font-medium text-lg text-[#8F8F8F] ml-[11px]">
-          {" "}
-          Астрахань{" "}
-        </span>
-        <span className="not-italic font-medium text-lg text-[#8F8F8F] ml-[11px]">
-          ул.Боевая, 40{" "}
+          Астрахань, ул.Боевая, 40
         </span>
       </div>
-      <div className="self-center flex 2/1-md-max:ml-[25px]">
+      <div
+        className="items-center flex lg-max:mr-[70px] justify-end mr-0
+                      2/1-md-max:justify-center 2/1-md-max:w-full 2/1-md-max:mr-0 2/1-md-max:ml-0"
+      >
         <Image
           src={IconCall}
           alt=""
